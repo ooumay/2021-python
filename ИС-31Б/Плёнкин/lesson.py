@@ -15,11 +15,12 @@ dict_1 = {'P': 16,'L': 12,'E': 5,'N': 14,'K': 11,'I': 9,'N': 14}
 values = list(dict_1.values()) # Список значений
 print(values)
 
-spring_values = ()
+spring_values = []
 
 for i in values:
     x = math.factorial(i)
-    
+    spring_values.append(x)
+print(spring_values)
 
 winter_values = [i ** 3 for i in values] # в) Возводим значения в 3-ю степень
 print(winter_values)
