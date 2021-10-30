@@ -9,7 +9,7 @@
 # 5. Создать список из значений словаря и разделить его на два: один из значений меньше среднего по списку, второй - среднее и выше.
 
 dict = {'P': 16,'L': 12,'E': 5,'N': 14,'K': 11,'I': 9,'N': 14}
-dict_spring = {'P': 1,'L': 4,'E': 5,'N': 2,'K': 3,'I': 7,'N': 2}
+dict_spring = {'P': 3,'L': 2,'E': 5,'N': 1,'K': 4,'I': 7,'N': 1}
 
 # Выводим факториалы значений библиотеки
 def fact(a):
@@ -21,9 +21,9 @@ for i in dict_spring:
     dict_spring[i] = fact(dict_spring[i])
 
 # Сортируем значения по алфовитному порядку ключей
-sort = sorted(dict.values())
+sort1 = sorted(dict.values())
 sorted_dict_1 = {}
-for i in sort:
+for i in sort1:
     for k in dict.keys():
         if dict[k]==i:
             sorted_dict_1[k]= dict_spring[k]
@@ -34,6 +34,18 @@ with open('sorted_1.txt','w') as out:   # Записываем отсортир�
         out.write('{}:{}\n'.format(key,val))
 
 # Сортируем значения от меньшего к большему
+sort2 = sorted(dict_spring.values())
+sorted_dict_2 = {}
+for i in sort2:
+    for k in dict_spring.keys():
+        if dict_spring[k]==i:
+            sorted_dict_2[k]= dict_spring[k]
+            break
+
+with open('sorted_2.txt','w') as out:   # Записываем отсортированный словарь в файл
+    for key,val in sorted_dict_2.items():
+        out.write('{}:{}\n'.format(key,val))
+
 
 
 
