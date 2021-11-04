@@ -65,6 +65,4 @@ name = list(input())
 
 dict = {}
 for key in name:
-    dict[key] = dict_alphabet[key]
-    
-print(dict)
+    dict[key] = dict_alphabet[key]  # Не совсем правильно получилось, так как повторяющиеся буквы он выводит только один раз. Другого решения я не придумал
